@@ -23,3 +23,51 @@ log.Info("Info log");
 log.Debug("Debug log");
 log.Eror("Error log");
 
+## **Example / Пример**
+
+**The main project / Основной проект**
+
+```C#
+using System; 
+using Logger; 
+ 
+namespace Primer; 
+ 
+public class Program 
+{
+    Log log = new Log(); 
+    public static void Main()
+    {
+
+        Log.Start(); //Initialize Logger
+
+        int a = 1;
+        string b = "Frizz@LastFire";
+
+        log.Debug(a); // [time] 1
+
+        try
+        {
+            log.Debug(b); // [time] Frizz@LastFire
+        }
+        catch (Exception ex)
+        {
+            log.Eror(ex);
+        }
+
+
+
+
+    } 
+}
+```
+
+JSON FILE 
+
+```Json
+{
+  "PathToFolder": {
+    "PathString": "/home/frizz/Документы/logs/Log"
+  }
+}
+```
